@@ -55,7 +55,7 @@ class TicTacToe
       turn()
     end
   end
-  
+
   def won?
     WIN_COMBINATIONS.each do |win_combo|
       win_index1 = win_combo[0]
