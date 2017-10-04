@@ -83,6 +83,36 @@ class TicTacToe
     end
   end
 
+  def draw?
+  if (won? == false && full? == true)
+    return true
+  else
+    return false
+  end
+end
+
+def over?
+  if won? != false
+    return true
+  elsif full? == true
+    return true
+  end
+end
+
+def winner
+  if (won?
+    win_combo = won?
+    sample_index = win_combo[0]
+    if @board[sample_index] == "X"
+      return "X"
+    elsif @board[sample_index] == "O"
+      return "O"
+    end
+  end
+  return nil
+end
+
+
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
   [3, 4, 5], # Middle row
