@@ -15,7 +15,9 @@ class TicTacToe
     user_input.to_i - 1
   end
 
-
+  def move(index, player_mark)
+    @board[index] = player_mark
+  end
 
 
   WIN_COMBINATIONS = [
