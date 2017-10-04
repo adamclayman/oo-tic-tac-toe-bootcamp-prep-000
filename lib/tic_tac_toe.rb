@@ -2,14 +2,14 @@ class TicTacToe
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
-  
+
   def input_to_index(user_input)
     user_input.to_i - 1
   end
 
 
 
-  
+
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
   [3, 4, 5], # Middle row
