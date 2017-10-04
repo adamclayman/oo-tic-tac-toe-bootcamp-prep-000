@@ -3,6 +3,20 @@ class TicTacToe
     @board = board || Array.new(9, " ")
   end
 
+  def play
+    while (over? != true && draw? != true) # Checks to see if the game is over
+      turn # Calls for another turn
+    end
+    if over? == true # If the game is over...
+      if won? != false # If there's a winner and win_combo available
+        puts "Congratulations #{winner()}!" # Samples win_combo and outputs "Congratulations X!" or "Congratulations O!" message
+      elsif draw?
+        puts "Cat's Game!"
+      end
+    end
+  end
+
+
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
