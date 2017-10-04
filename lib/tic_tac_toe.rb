@@ -100,7 +100,7 @@ def over?
 end
 
 def winner
-  if (won?
+  if won?
     win_combo = won?
     sample_index = win_combo[0]
     if @board[sample_index] == "X"
