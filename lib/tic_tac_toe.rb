@@ -18,7 +18,10 @@ class TicTacToe
   def move(index, player_mark)
     @board[index] = player_mark
   end
-
+  
+  def valid_move?(index)
+    index.between?(0,8) && !position_taken?(@board, index)
+  end
 
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
