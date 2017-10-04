@@ -55,7 +55,27 @@ class TicTacToe
       turn()
     end
   end
+  
+  def won?
+    WIN_COMBINATIONS.each do |win_combo|
+      win_index1 = win_combo[0]
+      win_index2 = win_combo[1]
+      win_index3 = win_combo[2]
 
+      if (@board[win_index1] == "X" && @board[win_index2] == "X" && @board[win_index3] == "X")
+        return win_combo
+      elsif (@board[win_index1] == "O" && @board[win_index2] == "O" && @board[win_index3] == "O")
+        return win_combo
+      end
+    end
+    if (@board.none? {|position| position == " " || position == "" || position == nil})
+      return false
+    elsif (@board == [" ", " ", " ", " ", " ", " ", " ", " ", " "] || @board == ["","","","","","","","",""]) #
+      return false
+    else
+      return false
+    end
+  end
 
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
