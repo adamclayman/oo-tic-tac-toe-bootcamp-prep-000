@@ -27,6 +27,16 @@ class TicTacToe
     !(@board[index] == " " || @board[index] == "")
   end
 
+  def turn_count
+    cells_filled = 0
+    @board.each do |cell|
+      if (cell == "X" || cell == "O")
+        cells_filled += 1
+      end
+    end
+    return cells_filled
+  end
+
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
   [3, 4, 5], # Middle row
