@@ -52,7 +52,7 @@ class TicTacToe
       move(index, player_mark)
       display_board()
     else
-      turn(board)
+      turn()
     end
   end
 
