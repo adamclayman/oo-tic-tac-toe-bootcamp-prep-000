@@ -37,6 +37,13 @@ class TicTacToe
     return cells_filled
   end
 
+  def current_player
+    turns = turn_count(@board)
+    player = turns % 2 == 0 ? "X" : "O"
+    return player
+  end
+
+
   WIN_COMBINATIONS = [
   [0, 1, 2], # Top row
   [3, 4, 5], # Middle row
